@@ -1,16 +1,13 @@
 const API_BASE = import.meta.env.VITE_API_BASE || "/api";
 
-const headers = {
-  "x-user-id": "frontend-user",
-  "x-role": "presales",
-};
+const headers = {};
 
 async function requestJSON(url: string, init?: RequestInit) {
   let resp: Response;
   try {
     resp = await fetch(url, init);
   } catch (err) {
-    throw new Error(`Cannot reach backend at ${API_BASE}. Make sure FastAPI is running on port 8000.`);
+    throw new Error(`Cannot reach backend at ${API_BASE}. Check frontend env VITE_API_BASE and backend deployment health.`);
   }
 
   const text = await resp.text();
