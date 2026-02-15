@@ -15,6 +15,8 @@ class Settings(BaseSettings):
     pinecone_api_key: str = ""
     azure_search_endpoint: str = ""
     pii_redaction_enabled: bool = True
+    cors_origins: str = "*"
+    cors_allow_credentials: bool = False
 
     model_config = SettingsConfigDict(env_prefix="COPILOT_", env_file=".env", extra="ignore")
 
