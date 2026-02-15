@@ -46,3 +46,7 @@ Install Mermaid CLI:
 ```bash
 npm install -g @mermaid-js/mermaid-cli
 ```
+
+## Vercel Deployment
+For hosted multi-user access, follow:
+- `/docs/deploy-vercel.md`

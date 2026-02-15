@@ -93,6 +93,14 @@ export async function getProposalFiles(projectId: string) {
   return requestJSON(`${API_BASE}/projects/${projectId}/proposal/files`, { headers });
 }
 
+export async function listOutputs(projectId: string) {
+  return requestJSON(`${API_BASE}/projects/${projectId}/outputs`, { headers });
+}
+
+export function outputDownloadUrl(projectId: string, fileName: string) {
+  return `${API_BASE}/projects/${projectId}/outputs/${encodeURIComponent(fileName)}`;
+}
+
 export async function brainstorm(projectId: string, prompt: string) {
   const form = new FormData();
   form.set("prompt", prompt);

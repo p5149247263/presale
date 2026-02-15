@@ -315,3 +315,25 @@ pre {
   margin: 0 0 8px 0;
   color: #334155;
 }
+
+.output-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.download-btn {
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.download-btn:hover {
+  filter: brightness(0.95);
+}

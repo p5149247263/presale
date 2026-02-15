@@ -6,6 +6,7 @@ from typing import Annotated
 from uuid import uuid4
 
 from fastapi import APIRouter, Depends, File, Form, HTTPException, UploadFile
+from fastapi.responses import FileResponse
 
 from app.agents.brainstormer import Brainstormer
 from app.agents.cloud_selector import CloudSelector
@@ -44,6 +45,35 @@ storage = LocalStorage(settings.storage_path)
 crypto_store = EncryptedFileStore(settings.encryption_key)
 queue = JobQueue()
 kb_service = KnowledgeBaseService()
+
+
+def _output_dir() -> Path:
+    return Path("app/output")
+
+
+def _list_project_outputs(project_id: str) -> list[dict]:
+    out_dir = _output_dir()
+    items: list[dict] = []
+
+    candidates = [
+        out_dir / f"proposal_{project_id}.pdf",
+        out_dir / f"proposal_{project_id}.docx",
+    ]
+    candidates.extend(sorted(out_dir.glob(f"architecture_{project_id}_plan_*.svg")))
+    candidates.extend(sorted(out_dir.glob(f"architecture_{project_id}_plan_*.png")))
+
+    for path in candidates:
+        if not path.exists():
+            continue
+        items.append(
+            {
+                "file_name": path.name,
+                "file_type": path.suffix.lower().replace(".", ""),
+                "size_bytes": path.stat().st_size,
+                "download_url": f"/api/projects/{project_id}/outputs/{path.name}",
+            }
+        )
+    return items
 
 
 @router.get("/health")
@@ -273,6 +303,23 @@ def proposal_files(project_id: str, user: UserContext = Depends(get_user_context
         "docx": str(out_dir / f"proposal_{project_id}.docx"),
         "pdf": str(out_dir / f"proposal_{project_id}.pdf"),
     }
+
+
+@router.get("/projects/{project_id}/outputs")
+def list_outputs(project_id: str, user: UserContext = Depends(get_user_context)) -> dict:
+    ensure_permission(user, "read")
+    files = _list_project_outputs(project_id)
+    return {"project_id": project_id, "files": files}
+
+
+@router.get("/projects/{project_id}/outputs/{file_name}")
+def download_output(project_id: str, file_name: str, user: UserContext = Depends(get_user_context)) -> FileResponse:
+    ensure_permission(user, "read")
+    allowed = {item["file_name"] for item in _list_project_outputs(project_id)}
+    if file_name not in allowed:
+        raise HTTPException(status_code=404, detail="Output file not found")
+    path = _output_dir() / file_name
+    return FileResponse(path=str(path), filename=file_name)
 
 
 @router.post("/projects/{project_id}/brainstorm", response_model=BrainstormResponse)

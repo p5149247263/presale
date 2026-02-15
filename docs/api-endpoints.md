@@ -15,6 +15,8 @@
 - `POST /api/projects/{project_id}/risks`
 - `POST /api/projects/{project_id}/proposal`
 - `GET /api/projects/{project_id}/proposal/files`
+- `GET /api/projects/{project_id}/outputs`
+- `GET /api/projects/{project_id}/outputs/{file_name}`
 - `POST /api/projects/{project_id}/brainstorm`
 - `GET /api/jobs/{job_id}`
 - `POST /api/kb/upload`
