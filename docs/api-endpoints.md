@@ -1,0 +1,21 @@
+# FastAPI Endpoints
+
+- `GET /api/health`
+- `GET /api/config/llm`
+- `POST /api/config/llm`
+- `POST /api/projects`
+- `GET /api/projects`
+- `POST /api/projects/{project_id}/ingest`
+- `POST /api/projects/{project_id}/requirements`
+- `GET /api/projects/{project_id}/requirements`
+- `POST /api/projects/{project_id}/requirements/approve`
+- `POST /api/projects/{project_id}/architecture`
+- `POST /api/projects/{project_id}/cloud`
+- `POST /api/projects/{project_id}/cost`
+- `POST /api/projects/{project_id}/risks`
+- `POST /api/projects/{project_id}/proposal`
+- `GET /api/projects/{project_id}/proposal/files`
+- `POST /api/projects/{project_id}/brainstorm`
+- `GET /api/jobs/{job_id}`
+- `POST /api/kb/upload`
+- `POST /api/kb/search`

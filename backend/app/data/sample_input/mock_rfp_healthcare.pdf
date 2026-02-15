@@ -1,0 +1,54 @@
+%PDF-1.4
+1 0 obj << /Type /Catalog /Pages 2 0 R >> endobj
+2 0 obj << /Type /Pages /Kids [3 0 R] /Count 1 >> endobj
+3 0 obj << /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 4 0 R >> >> /Contents 5 0 R >> endobj
+4 0 obj << /Type /Font /Subtype /Type1 /BaseFont /Helvetica >> endobj
+5 0 obj << /Length 1019 >> stream
+BT
+/F1 10 Tf
+50 780 Td
+(Section 1: Overview) Tj
+0 -14 Td
+(The client seeks an AI-enabled clinical operations assistant to reduce manual triage effort by 40 percent.) Tj
+0 -14 Td
+() Tj
+0 -14 Td
+(Section 2: Mandatory Requirements) Tj
+0 -14 Td
+(The solution MUST provide citation-grounded answers for every generated response.) Tj
+0 -14 Td
+(The platform MUST support encryption at rest and in transit and role-based access controls.) Tj
+0 -14 Td
+(The solution SHOULD integrate with existing EMR and CRM systems using secure APIs.) Tj
+0 -14 Td
+(The system SHOULD meet P95 latency under 2.5 seconds for common workflows.) Tj
+0 -14 Td
+() Tj
+0 -14 Td
+(Section 3: Compliance and Security) Tj
+0 -14 Td
+(All data must remain in US regions. SOC2-aligned controls are mandatory.) Tj
+0 -14 Td
+(PII and PHI data should be redacted in logs and prompts.) Tj
+0 -14 Td
+() Tj
+0 -14 Td
+(Section 4: Operations) Tj
+0 -14 Td
+(Client prefers Azure due to existing enterprise agreement.) Tj
+0 -14 Td
+(Required uptime SLA is 99.9 percent.) Tj
+ET
+endstream endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000241 00000 n 
+0000000311 00000 n 
+trailer << /Size 6 /Root 1 0 R >>
+startxref
+1382
+%%EOF

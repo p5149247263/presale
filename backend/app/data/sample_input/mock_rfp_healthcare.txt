@@ -1,0 +1,16 @@
+Section 1: Overview
+The client seeks an AI-enabled clinical operations assistant to reduce manual triage effort by 40 percent.
+
+Section 2: Mandatory Requirements
+The solution MUST provide citation-grounded answers for every generated response.
+The platform MUST support encryption at rest and in transit and role-based access controls.
+The solution SHOULD integrate with existing EMR and CRM systems using secure APIs.
+The system SHOULD meet P95 latency under 2.5 seconds for common workflows.
+
+Section 3: Compliance and Security
+All data must remain in US regions. SOC2-aligned controls are mandatory.
+PII and PHI data should be redacted in logs and prompts.
+
+Section 4: Operations
+Client prefers Azure due to existing enterprise agreement.
+Required uptime SLA is 99.9 percent.

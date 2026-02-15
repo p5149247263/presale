@@ -1,0 +1,215 @@
+{
+  "risks": [
+    {
+      "risk_id": "RISK-001",
+      "category": "privacy",
+      "description": "PII/PHI leakage through prompts, logs, or downstream integrations.",
+      "likelihood": "Medium",
+      "impact": "High",
+      "mitigations": [
+        "PII redaction",
+        "Data minimization",
+        "Encryption at rest/in transit",
+        "Access controls"
+      ],
+      "owner": "Security Lead",
+      "residual_risk": "Medium",
+      "citations": [
+        {
+          "doc_id": "41427ecc-f498-4646-bed4-605ff2dac969-1c0b03677dab3371",
+          "page": 1,
+          "section": "4. Technical Requirements",
+          "snippet_hash": "cff37ba0154f12c6"
+        },
+        {
+          "doc_id": "41427ecc-f498-4646-bed4-605ff2dac969-1c0b03677dab3371",
+          "page": 1,
+          "section": "3.3 Functional Requirements (OPTIONAL)",
+          "snippet_hash": "a4c5dc460ae7546b"
+        },
+        {
+          "doc_id": "41427ecc-f498-4646-bed4-605ff2dac969-1c0b03677dab3371",
+          "page": 1,
+          "section": "4. Technical Requirements",
+          "snippet_hash": "c9aa39bc0d6abac8"
+        },
+        {
+          "doc_id": "41427ecc-f498-4646-bed4-605ff2dac969-1c0b03677dab3371",
+          "page": 1,
+          "section": "The solution must leverage Generative AI and machine learning to:",
+          "snippet_hash": "f5120ac32ea165d2"
+        },
+        {
+          "doc_id": "41427ecc-f498-4646-bed4-605ff2dac969-1c0b03677dab3371",
+          "page": 1,
+          "section": "General",
+          "snippet_hash": "3591ceafb69dcc53"
+        },
+        {
+          "doc_id": "41427ecc-f498-4646-bed4-605ff2dac969-1c0b03677dab3371",
+          "page": 1,
+          "section": "3.2 Functional Requirements (SHOULD)",
+          "snippet_hash": "d708767f1c009068"
+        }
+      ]
+    },
+    {
+      "risk_id": "RISK-002",
+      "category": "hallucination",
+      "description": "Unverifiable model responses can impact business decisions.",
+      "likelihood": "Medium",
+      "impact": "High",
+      "mitigations": [
+        "RAG with citations",
+        "Constrained generation",
+        "Eval harness",
+        "Human review checkpoint"
+      ],
+      "owner": "AI Lead",
+      "residual_risk": "Medium",
+      "citations": [
+        {
+          "doc_id": "41427ecc-f498-4646-bed4-605ff2dac969-1c0b03677dab3371",
+          "page": 1,
+          "section": "4. Technical Requirements",
+          "snippet_hash": "cff37ba0154f12c6"
+        },
+        {
+          "doc_id": "41427ecc-f498-4646-bed4-605ff2dac969-1c0b03677dab3371",
+          "page": 1,
+          "section": "3.3 Functional Requirements (OPTIONAL)",
+          "snippet_hash": "a4c5dc460ae7546b"
+        },
+        {
+          "doc_id": "41427ecc-f498-4646-bed4-605ff2dac969-1c0b03677dab3371",
+          "page": 1,
+          "section": "4. Technical Requirements",
+          "snippet_hash": "c9aa39bc0d6abac8"
+        },
+        {
+          "doc_id": "41427ecc-f498-4646-bed4-605ff2dac969-1c0b03677dab3371",
+          "page": 1,
+          "section": "The solution must leverage Generative AI and machine learning to:",
+          "snippet_hash": "f5120ac32ea165d2"
+        },
+        {
+          "doc_id": "41427ecc-f498-4646-bed4-605ff2dac969-1c0b03677dab3371",
+          "page": 1,
+          "section": "General",
+          "snippet_hash": "3591ceafb69dcc53"
+        },
+        {
+          "doc_id": "41427ecc-f498-4646-bed4-605ff2dac969-1c0b03677dab3371",
+          "page": 1,
+          "section": "3.2 Functional Requirements (SHOULD)",
+          "snippet_hash": "d708767f1c009068"
+        }
+      ]
+    },
+    {
+      "risk_id": "RISK-003",
+      "category": "regulatory",
+      "description": "Misalignment with SOC2/ISO controls and sector regulations.",
+      "likelihood": "Low",
+      "impact": "High",
+      "mitigations": [
+        "Control mapping",
+        "Audit trails",
+        "Policy-based retention"
+      ],
+      "owner": "Compliance Officer",
+      "residual_risk": "Low",
+      "citations": [
+        {
+          "doc_id": "41427ecc-f498-4646-bed4-605ff2dac969-1c0b03677dab3371",
+          "page": 1,
+          "section": "4. Technical Requirements",
+          "snippet_hash": "cff37ba0154f12c6"
+        },
+        {
+          "doc_id": "41427ecc-f498-4646-bed4-605ff2dac969-1c0b03677dab3371",
+          "page": 1,
+          "section": "3.3 Functional Requirements (OPTIONAL)",
+          "snippet_hash": "a4c5dc460ae7546b"
+        },
+        {
+          "doc_id": "41427ecc-f498-4646-bed4-605ff2dac969-1c0b03677dab3371",
+          "page": 1,
+          "section": "4. Technical Requirements",
+          "snippet_hash": "c9aa39bc0d6abac8"
+        },
+        {
+          "doc_id": "41427ecc-f498-4646-bed4-605ff2dac969-1c0b03677dab3371",
+          "page": 1,
+          "section": "The solution must leverage Generative AI and machine learning to:",
+          "snippet_hash": "f5120ac32ea165d2"
+        },
+        {
+          "doc_id": "41427ecc-f498-4646-bed4-605ff2dac969-1c0b03677dab3371",
+          "page": 1,
+          "section": "General",
+          "snippet_hash": "3591ceafb69dcc53"
+        },
+        {
+          "doc_id": "41427ecc-f498-4646-bed4-605ff2dac969-1c0b03677dab3371",
+          "page": 1,
+          "section": "3.2 Functional Requirements (SHOULD)",
+          "snippet_hash": "d708767f1c009068"
+        }
+      ]
+    },
+    {
+      "risk_id": "RISK-004",
+      "category": "ops",
+      "description": "Model drift and performance degradation over time.",
+      "likelihood": "Medium",
+      "impact": "Medium",
+      "mitigations": [
+        "MLflow versioning",
+        "Drift monitoring",
+        "Rollback strategy",
+        "SLO alerts"
+      ],
+      "owner": "MLOps Lead",
+      "residual_risk": "Low",
+      "citations": [
+        {
+          "doc_id": "41427ecc-f498-4646-bed4-605ff2dac969-1c0b03677dab3371",
+          "page": 1,
+          "section": "4. Technical Requirements",
+          "snippet_hash": "cff37ba0154f12c6"
+        },
+        {
+          "doc_id": "41427ecc-f498-4646-bed4-605ff2dac969-1c0b03677dab3371",
+          "page": 1,
+          "section": "3.3 Functional Requirements (OPTIONAL)",
+          "snippet_hash": "a4c5dc460ae7546b"
+        },
+        {
+          "doc_id": "41427ecc-f498-4646-bed4-605ff2dac969-1c0b03677dab3371",
+          "page": 1,
+          "section": "4. Technical Requirements",
+          "snippet_hash": "c9aa39bc0d6abac8"
+        },
+        {
+          "doc_id": "41427ecc-f498-4646-bed4-605ff2dac969-1c0b03677dab3371",
+          "page": 1,
+          "section": "The solution must leverage Generative AI and machine learning to:",
+          "snippet_hash": "f5120ac32ea165d2"
+        },
+        {
+          "doc_id": "41427ecc-f498-4646-bed4-605ff2dac969-1c0b03677dab3371",
+          "page": 1,
+          "section": "General",
+          "snippet_hash": "3591ceafb69dcc53"
+        },
+        {
+          "doc_id": "41427ecc-f498-4646-bed4-605ff2dac969-1c0b03677dab3371",
+          "page": 1,
+          "section": "3.2 Functional Requirements (SHOULD)",
+          "snippet_hash": "d708767f1c009068"
+        }
+      ]
+    }
+  ]
+}

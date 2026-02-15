@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+
+# Node
+node_modules/
+frontend/node_modules/
+frontend/dist/
+
+# Local data
+backend/app/data/storage/projects/*.json
+backend/app/data/storage/docs/*.enc
+backend/app/data/audit.log
+
+# OS
+.DS_Store

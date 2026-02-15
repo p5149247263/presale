@@ -1,0 +1,11 @@
+Section 1: Business Goals
+Build a GenAI shopping assistant to improve conversion and reduce support ticket time.
+
+Section 2: Scope
+The assistant MUST answer product questions using approved catalog data only.
+The platform MUST provide audit logs and approval checkpoints before high-risk output is shared.
+The solution SHOULD support multilingual content in phase 2.
+
+Section 3: Constraints
+Client has existing workloads on AWS and strict cost controls.
+PII handling must align with internal privacy policy and data retention guidelines.
