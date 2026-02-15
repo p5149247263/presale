@@ -2,6 +2,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 import json
 
+from app.core.config import settings
+
 
 class AuditLogger:
     def __init__(self, audit_file: str = "app/data/audit.log") -> None:
@@ -15,8 +17,12 @@ class AuditLogger:
             "action": action,
             "details": details,
         }
-        with self.audit_path.open("a", encoding="utf-8") as fp:
-            fp.write(json.dumps(event) + "\n")
+        try:
+            with self.audit_path.open("a", encoding="utf-8") as fp:
+                fp.write(json.dumps(event) + "\n")
+        except OSError:
+            # Audit failures should not break primary user workflows.
+            return
 
 
-audit_logger = AuditLogger()
+audit_logger = AuditLogger(settings.audit_log_path)

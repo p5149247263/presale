@@ -42,13 +42,15 @@ from app.utils.mermaid_export import mermaid_to_png, mermaid_to_svg
 
 router = APIRouter()
 storage = LocalStorage(settings.storage_path)
-crypto_store = EncryptedFileStore(settings.encryption_key)
+crypto_store = EncryptedFileStore(settings.encryption_key, base_path=f"{settings.storage_path}/docs")
 queue = JobQueue()
 kb_service = KnowledgeBaseService()
 
 
 def _output_dir() -> Path:
-    return Path("app/output")
+    path = Path(settings.output_path)
+    path.mkdir(parents=True, exist_ok=True)
+    return path
 
 
 def _list_project_outputs(project_id: str) -> list[dict]:
@@ -203,12 +205,13 @@ def generate_architecture(project_id: str, user: UserContext = Depends(get_user_
     options = SolutionArchitect(context.vector_store).run(reqs)
     svg_paths = []
     png_paths = []
+    out_dir = _output_dir()
     for idx, opt in enumerate(options, start=1):
         svg_paths.append(
-            mermaid_to_svg(opt.mermaid, f"app/output/architecture_{project_id}_plan_{idx}.svg")
+            mermaid_to_svg(opt.mermaid, str(out_dir / f"architecture_{project_id}_plan_{idx}.svg"))
         )
         png_paths.append(
-            mermaid_to_png(opt.mermaid, f"app/output/architecture_{project_id}_plan_{idx}.png")
+            mermaid_to_png(opt.mermaid, str(out_dir / f"architecture_{project_id}_plan_{idx}.png"))
         )
     storage.save_json("architecture", project_id, {"options": [o.model_dump(mode="json") for o in options]})
     guardrail = evaluate_output(citation_count=sum(len(o.citations) for o in options), confidence=0.78)
@@ -287,7 +290,7 @@ def generate_proposal(project_id: str, user: UserContext = Depends(get_user_cont
     proposal = writer.build(project_id, project.name, reqs, architectures, cloud, cost, risks)
     storage.save_json("proposal", project_id, proposal.model_dump(mode="json"))
 
-    out_dir = Path("app/output")
+    out_dir = _output_dir()
     docx_path = writer.export_docx(proposal, str(out_dir / f"proposal_{project_id}.docx"))
     pdf_path = writer.export_pdf(proposal, str(out_dir / f"proposal_{project_id}.pdf"))
 
@@ -298,7 +301,7 @@ def generate_proposal(project_id: str, user: UserContext = Depends(get_user_cont
 @router.get("/projects/{project_id}/proposal/files")
 def proposal_files(project_id: str, user: UserContext = Depends(get_user_context)) -> dict:
     ensure_permission(user, "read")
-    out_dir = Path("app/output")
+    out_dir = _output_dir()
     return {
         "docx": str(out_dir / f"proposal_{project_id}.docx"),
         "pdf": str(out_dir / f"proposal_{project_id}.pdf"),
