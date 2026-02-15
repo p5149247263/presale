@@ -1,0 +1,708 @@
+{
+  "requirements": [
+    {
+      "requirement_id": "REQ-001",
+      "text": "The solution must leverage Generative AI and machine learning to:",
+      "req_type": "MUST",
+      "category": "Model",
+      "acceptance_criteria": "Validated via traceable test cases, UAT, and stakeholder sign-off against RFP scope.",
+      "dependencies": [
+        "Model endpoint access",
+        "Evaluation dataset"
+      ],
+      "risk_if_not_met": "High risk of non-compliance and proposal disqualification if not met.",
+      "citations": [
+        {
+          "doc_id": "f8996946-2f6e-42e8-a1d5-d4a3ac90df90-1c0b03677dab3371",
+          "page": 1,
+          "section": "The solution must leverage Generative AI and machine learning to:",
+          "snippet_hash": "bc7816c5a85ed9ef"
+        }
+      ],
+      "approved": false,
+      "confidence": 0.7999999999999999
+    },
+    {
+      "requirement_id": "REQ-002",
+      "text": "Provide real-time insights during advisor-client interactions",
+      "req_type": "NICE",
+      "category": "Security",
+      "acceptance_criteria": "Validated via traceable test cases, UAT, and stakeholder sign-off against RFP scope.",
+      "dependencies": [
+        "Identity provider access",
+        "KMS/secrets setup"
+      ],
+      "risk_if_not_met": "Lower risk, but may reduce solution competitiveness.",
+      "citations": [
+        {
+          "doc_id": "f8996946-2f6e-42e8-a1d5-d4a3ac90df90-1c0b03677dab3371",
+          "page": 1,
+          "section": "The solution must leverage Generative AI and machine learning to:",
+          "snippet_hash": "c3948df789b4fe32"
+        }
+      ],
+      "approved": false,
+      "confidence": 0.77
+    },
+    {
+      "requirement_id": "REQ-003",
+      "text": "Limited advisor real-time intelligence support",
+      "req_type": "NICE",
+      "category": "Security",
+      "acceptance_criteria": "Validated via traceable test cases, UAT, and stakeholder sign-off against RFP scope.",
+      "dependencies": [
+        "Identity provider access",
+        "KMS/secrets setup"
+      ],
+      "risk_if_not_met": "Lower risk, but may reduce solution competitiveness.",
+      "citations": [
+        {
+          "doc_id": "f8996946-2f6e-42e8-a1d5-d4a3ac90df90-1c0b03677dab3371",
+          "page": 1,
+          "section": "Current challenges:",
+          "snippet_hash": "3c2605530f537e3b"
+        }
+      ],
+      "approved": false,
+      "confidence": 0.77
+    },
+    {
+      "requirement_id": "REQ-004",
+      "text": "The vendor shall provide an end-to-end AI solution including:",
+      "req_type": "MUST",
+      "category": "Infra",
+      "acceptance_criteria": "Validated via traceable test cases, UAT, and stakeholder sign-off against RFP scope.",
+      "dependencies": [
+        "Client data access",
+        "Environment provisioning"
+      ],
+      "risk_if_not_met": "High risk of non-compliance and proposal disqualification if not met.",
+      "citations": [
+        {
+          "doc_id": "f8996946-2f6e-42e8-a1d5-d4a3ac90df90-1c0b03677dab3371",
+          "page": 1,
+          "section": "The vendor shall provide an end-to-end AI solution including:",
+          "snippet_hash": "ca4bc0229e17533f"
+        }
+      ],
+      "approved": false,
+      "confidence": 0.7999999999999999
+    },
+    {
+      "requirement_id": "REQ-005",
+      "text": "The system MUST ingest advisor-client emails, NDAs, contracts, and meeting transcripts.",
+      "req_type": "MUST",
+      "category": "Security",
+      "acceptance_criteria": "Validated via traceable test cases, UAT, and stakeholder sign-off against RFP scope.",
+      "dependencies": [
+        "Identity provider access",
+        "KMS/secrets setup"
+      ],
+      "risk_if_not_met": "High risk of non-compliance and proposal disqualification if not met.",
+      "citations": [
+        {
+          "doc_id": "f8996946-2f6e-42e8-a1d5-d4a3ac90df90-1c0b03677dab3371",
+          "page": 1,
+          "section": "3.1 Functional Requirements (MANDATORY)",
+          "snippet_hash": "3639e805a07efbff"
+        }
+      ],
+      "approved": false,
+      "confidence": 0.85
+    },
+    {
+      "requirement_id": "REQ-006",
+      "text": "The system MUST identify and flag regulatory risks in communications.",
+      "req_type": "MUST",
+      "category": "Compliance",
+      "acceptance_criteria": "Validated via traceable test cases, UAT, and stakeholder sign-off against RFP scope.",
+      "dependencies": [
+        "Client data access",
+        "Environment provisioning"
+      ],
+      "risk_if_not_met": "High risk of non-compliance and proposal disqualification if not met.",
+      "citations": [
+        {
+          "doc_id": "f8996946-2f6e-42e8-a1d5-d4a3ac90df90-1c0b03677dab3371",
+          "page": 1,
+          "section": "3.1 Functional Requirements (MANDATORY)",
+          "snippet_hash": "66470fb636d98097"
+        }
+      ],
+      "approved": false,
+      "confidence": 0.7999999999999999
+    },
+    {
+      "requirement_id": "REQ-007",
+      "text": "The system MUST provide structured summaries with citation references.",
+      "req_type": "MUST",
+      "category": "Infra",
+      "acceptance_criteria": "Validated via traceable test cases, UAT, and stakeholder sign-off against RFP scope.",
+      "dependencies": [
+        "Client data access",
+        "Environment provisioning"
+      ],
+      "risk_if_not_met": "High risk of non-compliance and proposal disqualification if not met.",
+      "citations": [
+        {
+          "doc_id": "f8996946-2f6e-42e8-a1d5-d4a3ac90df90-1c0b03677dab3371",
+          "page": 1,
+          "section": "3.1 Functional Requirements (MANDATORY)",
+          "snippet_hash": "133c88838c4a4196"
+        }
+      ],
+      "approved": false,
+      "confidence": 0.7999999999999999
+    },
+    {
+      "requirement_id": "REQ-008",
+      "text": "The system MUST support Retrieval-Augmented Generation (RAG).",
+      "req_type": "MUST",
+      "category": "Model",
+      "acceptance_criteria": "Validated via traceable test cases, UAT, and stakeholder sign-off against RFP scope.",
+      "dependencies": [
+        "Model endpoint access",
+        "Evaluation dataset"
+      ],
+      "risk_if_not_met": "High risk of non-compliance and proposal disqualification if not met.",
+      "citations": [
+        {
+          "doc_id": "f8996946-2f6e-42e8-a1d5-d4a3ac90df90-1c0b03677dab3371",
+          "page": 1,
+          "section": "3.1 Functional Requirements (MANDATORY)",
+          "snippet_hash": "a43fca9e7f929e1e"
+        }
+      ],
+      "approved": false,
+      "confidence": 0.7999999999999999
+    },
+    {
+      "requirement_id": "REQ-009",
+      "text": "The system MUST maintain audit logs for all AI-generated outputs.",
+      "req_type": "MUST",
+      "category": "Compliance",
+      "acceptance_criteria": "Validated via traceable test cases, UAT, and stakeholder sign-off against RFP scope.",
+      "dependencies": [
+        "Client data access",
+        "Environment provisioning"
+      ],
+      "risk_if_not_met": "High risk of non-compliance and proposal disqualification if not met.",
+      "citations": [
+        {
+          "doc_id": "f8996946-2f6e-42e8-a1d5-d4a3ac90df90-1c0b03677dab3371",
+          "page": 1,
+          "section": "3.1 Functional Requirements (MANDATORY)",
+          "snippet_hash": "46fd5fa06c2ae318"
+        }
+      ],
+      "approved": false,
+      "confidence": 0.7999999999999999
+    },
+    {
+      "requirement_id": "REQ-010",
+      "text": "The system MUST integrate with Microsoft 365 and Salesforce.",
+      "req_type": "MUST",
+      "category": "Infra",
+      "acceptance_criteria": "Validated via traceable test cases, UAT, and stakeholder sign-off against RFP scope.",
+      "dependencies": [
+        "Client data access",
+        "Environment provisioning"
+      ],
+      "risk_if_not_met": "High risk of non-compliance and proposal disqualification if not met.",
+      "citations": [
+        {
+          "doc_id": "f8996946-2f6e-42e8-a1d5-d4a3ac90df90-1c0b03677dab3371",
+          "page": 1,
+          "section": "3.1 Functional Requirements (MANDATORY)",
+          "snippet_hash": "ecfef050f5b40270"
+        }
+      ],
+      "approved": false,
+      "confidence": 0.7999999999999999
+    },
+    {
+      "requirement_id": "REQ-011",
+      "text": "The system MUST support role-based access control.",
+      "req_type": "MUST",
+      "category": "Security",
+      "acceptance_criteria": "Validated via traceable test cases, UAT, and stakeholder sign-off against RFP scope.",
+      "dependencies": [
+        "Identity provider access",
+        "KMS/secrets setup"
+      ],
+      "risk_if_not_met": "High risk of non-compliance and proposal disqualification if not met.",
+      "citations": [
+        {
+          "doc_id": "f8996946-2f6e-42e8-a1d5-d4a3ac90df90-1c0b03677dab3371",
+          "page": 1,
+          "section": "3.1 Functional Requirements (MANDATORY)",
+          "snippet_hash": "2527e169305255b2"
+        }
+      ],
+      "approved": false,
+      "confidence": 0.85
+    },
+    {
+      "requirement_id": "REQ-012",
+      "text": "The system MUST comply with SEC and FINRA guidelines.",
+      "req_type": "MUST",
+      "category": "UI",
+      "acceptance_criteria": "Validated via traceable test cases, UAT, and stakeholder sign-off against RFP scope.",
+      "dependencies": [
+        "Client data access",
+        "Environment provisioning"
+      ],
+      "risk_if_not_met": "High risk of non-compliance and proposal disqualification if not met.",
+      "citations": [
+        {
+          "doc_id": "f8996946-2f6e-42e8-a1d5-d4a3ac90df90-1c0b03677dab3371",
+          "page": 1,
+          "section": "3.1 Functional Requirements (MANDATORY)",
+          "snippet_hash": "eb2c3ae6f1c3c68e"
+        }
+      ],
+      "approved": false,
+      "confidence": 0.7999999999999999
+    },
+    {
+      "requirement_id": "REQ-013",
+      "text": "Functional Requirements (SHOULD)",
+      "req_type": "SHOULD",
+      "category": "UI",
+      "acceptance_criteria": "Validated via traceable test cases, UAT, and stakeholder sign-off against RFP scope.",
+      "dependencies": [
+        "Client data access",
+        "Environment provisioning"
+      ],
+      "risk_if_not_met": "Medium delivery and quality risk if not met.",
+      "citations": [
+        {
+          "doc_id": "f8996946-2f6e-42e8-a1d5-d4a3ac90df90-1c0b03677dab3371",
+          "page": 1,
+          "section": "3.2 Functional Requirements (SHOULD)",
+          "snippet_hash": "28530d6458ada66d"
+        }
+      ],
+      "approved": false,
+      "confidence": 0.72
+    },
+    {
+      "requirement_id": "REQ-014",
+      "text": "The system SHOULD provide real-time advisor assistance during calls.",
+      "req_type": "SHOULD",
+      "category": "Security",
+      "acceptance_criteria": "Validated via traceable test cases, UAT, and stakeholder sign-off against RFP scope.",
+      "dependencies": [
+        "Identity provider access",
+        "KMS/secrets setup"
+      ],
+      "risk_if_not_met": "Medium delivery and quality risk if not met.",
+      "citations": [
+        {
+          "doc_id": "f8996946-2f6e-42e8-a1d5-d4a3ac90df90-1c0b03677dab3371",
+          "page": 1,
+          "section": "3.2 Functional Requirements (SHOULD)",
+          "snippet_hash": "7531828e9800aa25"
+        }
+      ],
+      "approved": false,
+      "confidence": 0.77
+    },
+    {
+      "requirement_id": "REQ-015",
+      "text": "The system SHOULD recommend cross-sell opportunities.",
+      "req_type": "SHOULD",
+      "category": "Infra",
+      "acceptance_criteria": "Validated via traceable test cases, UAT, and stakeholder sign-off against RFP scope.",
+      "dependencies": [
+        "Client data access",
+        "Environment provisioning"
+      ],
+      "risk_if_not_met": "Medium delivery and quality risk if not met.",
+      "citations": [
+        {
+          "doc_id": "f8996946-2f6e-42e8-a1d5-d4a3ac90df90-1c0b03677dab3371",
+          "page": 1,
+          "section": "3.2 Functional Requirements (SHOULD)",
+          "snippet_hash": "2e3898a6e22d6bcb"
+        }
+      ],
+      "approved": false,
+      "confidence": 0.72
+    },
+    {
+      "requirement_id": "REQ-016",
+      "text": "The system SHOULD generate automated compliance reports.",
+      "req_type": "SHOULD",
+      "category": "Compliance",
+      "acceptance_criteria": "Validated via traceable test cases, UAT, and stakeholder sign-off against RFP scope.",
+      "dependencies": [
+        "Client data access",
+        "Environment provisioning"
+      ],
+      "risk_if_not_met": "Medium delivery and quality risk if not met.",
+      "citations": [
+        {
+          "doc_id": "f8996946-2f6e-42e8-a1d5-d4a3ac90df90-1c0b03677dab3371",
+          "page": 1,
+          "section": "3.2 Functional Requirements (SHOULD)",
+          "snippet_hash": "c36c4dbd7bb1981a"
+        }
+      ],
+      "approved": false,
+      "confidence": 0.72
+    },
+    {
+      "requirement_id": "REQ-017",
+      "text": "The system SHOULD support multilingual inputs (English, Spanish).",
+      "req_type": "SHOULD",
+      "category": "Infra",
+      "acceptance_criteria": "Validated via traceable test cases, UAT, and stakeholder sign-off against RFP scope.",
+      "dependencies": [
+        "Client data access",
+        "Environment provisioning"
+      ],
+      "risk_if_not_met": "Medium delivery and quality risk if not met.",
+      "citations": [
+        {
+          "doc_id": "f8996946-2f6e-42e8-a1d5-d4a3ac90df90-1c0b03677dab3371",
+          "page": 1,
+          "section": "3.2 Functional Requirements (SHOULD)",
+          "snippet_hash": "acca34df3e35d4eb"
+        }
+      ],
+      "approved": false,
+      "confidence": 0.72
+    },
+    {
+      "requirement_id": "REQ-018",
+      "text": "Solution MUST support deployment on AWS, Azure, or GCP.",
+      "req_type": "MUST",
+      "category": "Infra",
+      "acceptance_criteria": "Validated via traceable test cases, UAT, and stakeholder sign-off against RFP scope.",
+      "dependencies": [
+        "Client data access",
+        "Environment provisioning"
+      ],
+      "risk_if_not_met": "High risk of non-compliance and proposal disqualification if not met.",
+      "citations": [
+        {
+          "doc_id": "f8996946-2f6e-42e8-a1d5-d4a3ac90df90-1c0b03677dab3371",
+          "page": 1,
+          "section": "4. Technical Requirements",
+          "snippet_hash": "1ba487cf0e00ab15"
+        }
+      ],
+      "approved": false,
+      "confidence": 0.7999999999999999
+    },
+    {
+      "requirement_id": "REQ-019",
+      "text": "Solution MUST specify GPU requirements and scaling strategy.",
+      "req_type": "MUST",
+      "category": "UI",
+      "acceptance_criteria": "Validated via traceable test cases, UAT, and stakeholder sign-off against RFP scope.",
+      "dependencies": [
+        "Client data access",
+        "Environment provisioning"
+      ],
+      "risk_if_not_met": "High risk of non-compliance and proposal disqualification if not met.",
+      "citations": [
+        {
+          "doc_id": "f8996946-2f6e-42e8-a1d5-d4a3ac90df90-1c0b03677dab3371",
+          "page": 1,
+          "section": "4. Technical Requirements",
+          "snippet_hash": "537a27699121d4b9"
+        }
+      ],
+      "approved": false,
+      "confidence": 0.7999999999999999
+    },
+    {
+      "requirement_id": "REQ-020",
+      "text": "Solution MUST provide estimated monthly infrastructure cost.",
+      "req_type": "MUST",
+      "category": "Infra",
+      "acceptance_criteria": "Validated via traceable test cases, UAT, and stakeholder sign-off against RFP scope.",
+      "dependencies": [
+        "Client data access",
+        "Environment provisioning"
+      ],
+      "risk_if_not_met": "High risk of non-compliance and proposal disqualification if not met.",
+      "citations": [
+        {
+          "doc_id": "f8996946-2f6e-42e8-a1d5-d4a3ac90df90-1c0b03677dab3371",
+          "page": 1,
+          "section": "4. Technical Requirements",
+          "snippet_hash": "e64c60e295614cef"
+        }
+      ],
+      "approved": false,
+      "confidence": 0.7999999999999999
+    },
+    {
+      "requirement_id": "REQ-021",
+      "text": "LLM provider must be configurable (OpenAI, Anthropic, or equivalent).",
+      "req_type": "MUST",
+      "category": "Model",
+      "acceptance_criteria": "Validated via traceable test cases, UAT, and stakeholder sign-off against RFP scope.",
+      "dependencies": [
+        "Model endpoint access",
+        "Evaluation dataset"
+      ],
+      "risk_if_not_met": "High risk of non-compliance and proposal disqualification if not met.",
+      "citations": [
+        {
+          "doc_id": "f8996946-2f6e-42e8-a1d5-d4a3ac90df90-1c0b03677dab3371",
+          "page": 1,
+          "section": "4. Technical Requirements",
+          "snippet_hash": "2f83063046e5d25e"
+        }
+      ],
+      "approved": false,
+      "confidence": 0.7999999999999999
+    },
+    {
+      "requirement_id": "REQ-022",
+      "text": "Vector database must support enterprise-grade encryption.",
+      "req_type": "MUST",
+      "category": "Security",
+      "acceptance_criteria": "Validated via traceable test cases, UAT, and stakeholder sign-off against RFP scope.",
+      "dependencies": [
+        "Identity provider access",
+        "KMS/secrets setup"
+      ],
+      "risk_if_not_met": "High risk of non-compliance and proposal disqualification if not met.",
+      "citations": [
+        {
+          "doc_id": "f8996946-2f6e-42e8-a1d5-d4a3ac90df90-1c0b03677dab3371",
+          "page": 1,
+          "section": "4. Technical Requirements",
+          "snippet_hash": "a2f661da7a7ca5df"
+        }
+      ],
+      "approved": false,
+      "confidence": 0.85
+    },
+    {
+      "requirement_id": "REQ-023",
+      "text": "Data must remain within US region.",
+      "req_type": "MUST",
+      "category": "Data",
+      "acceptance_criteria": "Validated via traceable test cases, UAT, and stakeholder sign-off against RFP scope.",
+      "dependencies": [
+        "Data source access",
+        "Data quality baseline"
+      ],
+      "risk_if_not_met": "High risk of non-compliance and proposal disqualification if not met.",
+      "citations": [
+        {
+          "doc_id": "f8996946-2f6e-42e8-a1d5-d4a3ac90df90-1c0b03677dab3371",
+          "page": 1,
+          "section": "4. Technical Requirements",
+          "snippet_hash": "aaf104638e4d81ac"
+        }
+      ],
+      "approved": false,
+      "confidence": 0.7999999999999999
+    },
+    {
+      "requirement_id": "REQ-024",
+      "text": "Latency must not exceed 3 seconds for real-time queries.",
+      "req_type": "MUST",
+      "category": "SLA",
+      "acceptance_criteria": "Validated via traceable test cases, UAT, and stakeholder sign-off against RFP scope.",
+      "dependencies": [
+        "Load profile assumptions",
+        "Monitoring/alerting stack"
+      ],
+      "risk_if_not_met": "High risk of non-compliance and proposal disqualification if not met.",
+      "citations": [
+        {
+          "doc_id": "f8996946-2f6e-42e8-a1d5-d4a3ac90df90-1c0b03677dab3371",
+          "page": 1,
+          "section": "4. Technical Requirements",
+          "snippet_hash": "4b764b4dd6de1647"
+        }
+      ],
+      "approved": false,
+      "confidence": 0.85
+    },
+    {
+      "requirement_id": "REQ-025",
+      "text": "System availability must be 99.9% uptime.",
+      "req_type": "MUST",
+      "category": "SLA",
+      "acceptance_criteria": "Validated via traceable test cases, UAT, and stakeholder sign-off against RFP scope.",
+      "dependencies": [
+        "Load profile assumptions",
+        "Monitoring/alerting stack"
+      ],
+      "risk_if_not_met": "High risk of non-compliance and proposal disqualification if not met.",
+      "citations": [
+        {
+          "doc_id": "f8996946-2f6e-42e8-a1d5-d4a3ac90df90-1c0b03677dab3371",
+          "page": 1,
+          "section": "4. Technical Requirements",
+          "snippet_hash": "48f3f413c473eaf4"
+        }
+      ],
+      "approved": false,
+      "confidence": 0.85
+    },
+    {
+      "requirement_id": "REQ-026",
+      "text": "Vendors must estimate storage and embedding costs.",
+      "req_type": "MUST",
+      "category": "Model",
+      "acceptance_criteria": "Validated via traceable test cases, UAT, and stakeholder sign-off against RFP scope.",
+      "dependencies": [
+        "Model endpoint access",
+        "Evaluation dataset"
+      ],
+      "risk_if_not_met": "High risk of non-compliance and proposal disqualification if not met.",
+      "citations": [
+        {
+          "doc_id": "f8996946-2f6e-42e8-a1d5-d4a3ac90df90-1c0b03677dab3371",
+          "page": 1,
+          "section": "4. Technical Requirements",
+          "snippet_hash": "222abd56b1debff2"
+        }
+      ],
+      "approved": false,
+      "confidence": 0.7999999999999999
+    },
+    {
+      "requirement_id": "REQ-027",
+      "text": "Solution MUST comply with:",
+      "req_type": "MUST",
+      "category": "Infra",
+      "acceptance_criteria": "Validated via traceable test cases, UAT, and stakeholder sign-off against RFP scope.",
+      "dependencies": [
+        "Client data access",
+        "Environment provisioning"
+      ],
+      "risk_if_not_met": "High risk of non-compliance and proposal disqualification if not met.",
+      "citations": [
+        {
+          "doc_id": "f8996946-2f6e-42e8-a1d5-d4a3ac90df90-1c0b03677dab3371",
+          "page": 1,
+          "section": "Solution MUST comply with:",
+          "snippet_hash": "cfb23f839787f661"
+        }
+      ],
+      "approved": false,
+      "confidence": 0.7999999999999999
+    },
+    {
+      "requirement_id": "REQ-028",
+      "text": "All PII must be encrypted at rest and in transit.",
+      "req_type": "MUST",
+      "category": "Security",
+      "acceptance_criteria": "Validated via traceable test cases, UAT, and stakeholder sign-off against RFP scope.",
+      "dependencies": [
+        "Identity provider access",
+        "KMS/secrets setup"
+      ],
+      "risk_if_not_met": "High risk of non-compliance and proposal disqualification if not met.",
+      "citations": [
+        {
+          "doc_id": "f8996946-2f6e-42e8-a1d5-d4a3ac90df90-1c0b03677dab3371",
+          "page": 1,
+          "section": "Solution MUST comply with:",
+          "snippet_hash": "d3fcdad416424d06"
+        }
+      ],
+      "approved": false,
+      "confidence": 0.85
+    },
+    {
+      "requirement_id": "REQ-029",
+      "text": "System MUST support data redaction.",
+      "req_type": "MUST",
+      "category": "Data",
+      "acceptance_criteria": "Validated via traceable test cases, UAT, and stakeholder sign-off against RFP scope.",
+      "dependencies": [
+        "Data source access",
+        "Data quality baseline"
+      ],
+      "risk_if_not_met": "High risk of non-compliance and proposal disqualification if not met.",
+      "citations": [
+        {
+          "doc_id": "f8996946-2f6e-42e8-a1d5-d4a3ac90df90-1c0b03677dab3371",
+          "page": 1,
+          "section": "Solution MUST comply with:",
+          "snippet_hash": "fc2d05024b415258"
+        }
+      ],
+      "approved": false,
+      "confidence": 0.7999999999999999
+    },
+    {
+      "requirement_id": "REQ-030",
+      "text": "AI hallucination risk mitigation strategy must be documented.",
+      "req_type": "MUST",
+      "category": "Model",
+      "acceptance_criteria": "Validated via traceable test cases, UAT, and stakeholder sign-off against RFP scope.",
+      "dependencies": [
+        "Model endpoint access",
+        "Evaluation dataset"
+      ],
+      "risk_if_not_met": "High risk of non-compliance and proposal disqualification if not met.",
+      "citations": [
+        {
+          "doc_id": "f8996946-2f6e-42e8-a1d5-d4a3ac90df90-1c0b03677dab3371",
+          "page": 1,
+          "section": "Solution MUST comply with:",
+          "snippet_hash": "40496f86b88d4a97"
+        }
+      ],
+      "approved": false,
+      "confidence": 0.7999999999999999
+    },
+    {
+      "requirement_id": "REQ-031",
+      "text": "Vendor must provide bias detection and monitoring plan.",
+      "req_type": "MUST",
+      "category": "Infra",
+      "acceptance_criteria": "Validated via traceable test cases, UAT, and stakeholder sign-off against RFP scope.",
+      "dependencies": [
+        "Client data access",
+        "Environment provisioning"
+      ],
+      "risk_if_not_met": "High risk of non-compliance and proposal disqualification if not met.",
+      "citations": [
+        {
+          "doc_id": "f8996946-2f6e-42e8-a1d5-d4a3ac90df90-1c0b03677dab3371",
+          "page": 1,
+          "section": "Solution MUST comply with:",
+          "snippet_hash": "f302dc0919c91f04"
+        }
+      ],
+      "approved": false,
+      "confidence": 0.7999999999999999
+    },
+    {
+      "requirement_id": "REQ-032",
+      "text": "Proposals will be evaluated based on:",
+      "req_type": "NICE",
+      "category": "Infra",
+      "acceptance_criteria": "Validated via traceable test cases, UAT, and stakeholder sign-off against RFP scope.",
+      "dependencies": [
+        "Client data access",
+        "Environment provisioning"
+      ],
+      "risk_if_not_met": "Lower risk, but may reduce solution competitiveness.",
+      "citations": [
+        {
+          "doc_id": "f8996946-2f6e-42e8-a1d5-d4a3ac90df90-1c0b03677dab3371",
+          "page": 1,
+          "section": "Proposals will be evaluated based on:",
+          "snippet_hash": "43185e9052b45604"
+        }
+      ],
+      "approved": false,
+      "confidence": 0.72
+    }
+  ]
+}

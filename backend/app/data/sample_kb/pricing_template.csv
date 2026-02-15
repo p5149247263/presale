@@ -1,0 +1,4 @@
+category,item,monthly_cost_usd,notes
+GPU,A10 inference baseline,384.00,placeholder
+LLM,Prompt+completion tokens,1400.00,placeholder
+Storage,Object+vector index,250.00,placeholder

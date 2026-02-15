@@ -1,0 +1,42 @@
+{
+  "requirements": [
+    {
+      "requirement_id": "REQ-001",
+      "text": "The solution MUST provide citation-grounded answers for every generated response.",
+      "req_type": "MUST",
+      "category": "Model",
+      "acceptance_criteria": "All generated responses include at least one RFP/KB citation.",
+      "dependencies": ["RAG index", "Citation renderer"],
+      "risk_if_not_met": "High hallucination risk and poor proposal credibility.",
+      "citations": [
+        {
+          "doc_id": "mock_rfp_healthcare",
+          "page": 1,
+          "section": "Section 2: Mandatory Requirements",
+          "snippet_hash": "a1b2c3d4e5f60708"
+        }
+      ],
+      "approved": true,
+      "confidence": 0.89
+    },
+    {
+      "requirement_id": "REQ-002",
+      "text": "The platform MUST support encryption at rest and in transit and role-based access controls.",
+      "req_type": "MUST",
+      "category": "Security",
+      "acceptance_criteria": "Encryption + RBAC controls verified in architecture and deployment plan.",
+      "dependencies": ["KMS", "Identity provider"],
+      "risk_if_not_met": "Non-compliance and data exposure risk.",
+      "citations": [
+        {
+          "doc_id": "mock_rfp_healthcare",
+          "page": 1,
+          "section": "Section 2: Mandatory Requirements",
+          "snippet_hash": "b2c3d4e5f6070819"
+        }
+      ],
+      "approved": true,
+      "confidence": 0.9
+    }
+  ]
+}

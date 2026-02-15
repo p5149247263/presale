@@ -1,0 +1,125 @@
+{
+  "options": [
+    {
+      "name": "Plan A - RAG First",
+      "summary": "[MOCK-gpt-4o-mini] Create a 2-3 sentence architecture recommendation for Plan A (RAG-first) for an AI presales proposal.\nRequirements context:\n- MUST: The solution must leverage Generative AI and machine learning to:\n- NICE: Provide real-time insights during advisor-client interactions\n- NICE: Limited advisor real-time intelligence support\n- MUST: The vendor shall provide an end-to-end AI solution",
+      "components": [
+        "API Gateway",
+        "Orchestrator",
+        "Vector DB",
+        "LLM",
+        "Guardrails",
+        "Observability"
+      ],
+      "data_flow": [
+        "Source systems -> ETL -> Document store -> Chunk/Embed -> Vector DB",
+        "User query -> Retriever -> Prompt Builder -> LLM -> Cited Answer"
+      ],
+      "model_flow": [
+        "Embed model",
+        "Retrieval reranker",
+        "Hosted foundation model"
+      ],
+      "latency_scalability_notes": [
+        "P95 latency target under 2.5s with cache and ANN index.",
+        "Horizontal scaling for retrieval and orchestration layers."
+      ],
+      "integration_plan": [
+        "REST APIs for CRM/ERP",
+        "Eventing with queue for async pipelines"
+      ],
+      "mermaid": "graph TD\nU[User] --> FE[Portal]\nFE --> ORCH[Orchestrator API]\nORCH --> RET[RAG Retriever]\nRET --> VDB[Vector DB]\nORCH --> LLM[LLM Provider]\nORCH --> G[Guardrails + Eval]\nORCH --> LOG[Audit + Monitoring]",
+      "citations": [
+        {
+          "doc_id": "3fde5d75-d464-4566-a125-27639533cdca-1c0b03677dab3371",
+          "page": 1,
+          "section": "Responses must include:",
+          "snippet_hash": "1effda862e14ba49"
+        },
+        {
+          "doc_id": "3fde5d75-d464-4566-a125-27639533cdca-1c0b03677dab3371",
+          "page": 1,
+          "section": "Solution MUST comply with:",
+          "snippet_hash": "86e9ee473a586d99"
+        },
+        {
+          "doc_id": "3fde5d75-d464-4566-a125-27639533cdca-1c0b03677dab3371",
+          "page": 1,
+          "section": "Current challenges:",
+          "snippet_hash": "17bfce5bf3973915"
+        },
+        {
+          "doc_id": "3fde5d75-d464-4566-a125-27639533cdca-1c0b03677dab3371",
+          "page": 1,
+          "section": "4. Technical Requirements",
+          "snippet_hash": "73615ce7f5d5a04f"
+        },
+        {
+          "doc_id": "3fde5d75-d464-4566-a125-27639533cdca-1c0b03677dab3371",
+          "page": 1,
+          "section": "Responses must include:",
+          "snippet_hash": "0f02c521438349f7"
+        }
+      ]
+    },
+    {
+      "name": "Plan B - Domain Fine-Tune Hybrid",
+      "summary": "[MOCK-gpt-4o-mini] Create a 2-3 sentence architecture recommendation for Plan B (fine-tune hybrid) for an AI presales proposal.\nRequirements context:\n- MUST: The solution must leverage Generative AI and machine learning to:\n- NICE: Provide real-time insights during advisor-client interactions\n- NICE: Limited advisor real-time intelligence support\n- MUST: The vendor shall provide an end-to-end AI s",
+      "components": [
+        "Feature Store",
+        "Fine-tuned model",
+        "RAG layer",
+        "Human review console"
+      ],
+      "data_flow": [
+        "Data lake -> Labeling -> Fine-tune -> Inference endpoint",
+        "RAG sidecar for policy docs"
+      ],
+      "model_flow": [
+        "Fine-tuned open-source model",
+        "Fallback hosted LLM"
+      ],
+      "latency_scalability_notes": [
+        "Lower per-request latency for known intents.",
+        "Higher MLOps overhead and governance requirements."
+      ],
+      "integration_plan": [
+        "CI/CD for model registry",
+        "MLflow for versioning and drift alerts"
+      ],
+      "mermaid": "graph LR\nDS[Data Sources] --> TR[Training Pipeline]\nTR --> REG[Model Registry]\nREG --> INF[Inference API]\nQ[Query] --> RAG[RAG Layer]\nRAG --> INF",
+      "citations": [
+        {
+          "doc_id": "3fde5d75-d464-4566-a125-27639533cdca-1c0b03677dab3371",
+          "page": 1,
+          "section": "Responses must include:",
+          "snippet_hash": "1effda862e14ba49"
+        },
+        {
+          "doc_id": "3fde5d75-d464-4566-a125-27639533cdca-1c0b03677dab3371",
+          "page": 1,
+          "section": "Solution MUST comply with:",
+          "snippet_hash": "86e9ee473a586d99"
+        },
+        {
+          "doc_id": "3fde5d75-d464-4566-a125-27639533cdca-1c0b03677dab3371",
+          "page": 1,
+          "section": "Current challenges:",
+          "snippet_hash": "17bfce5bf3973915"
+        },
+        {
+          "doc_id": "3fde5d75-d464-4566-a125-27639533cdca-1c0b03677dab3371",
+          "page": 1,
+          "section": "4. Technical Requirements",
+          "snippet_hash": "73615ce7f5d5a04f"
+        },
+        {
+          "doc_id": "3fde5d75-d464-4566-a125-27639533cdca-1c0b03677dab3371",
+          "page": 1,
+          "section": "Responses must include:",
+          "snippet_hash": "0f02c521438349f7"
+        }
+      ]
+    }
+  ]
+}

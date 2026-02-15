@@ -1,0 +1,42 @@
+{
+  "primary_cloud": "Azure",
+  "rationale": "Azure is selected based on stated stack preferences, compliance posture, and delivery velocity. Alternative is included for negotiation and risk balancing.",
+  "alternatives": [
+    "AWS",
+    "Azure",
+    "GCP",
+    "OnPrem"
+  ],
+  "constraints_considered": [
+    "Client preference",
+    "Data residency",
+    "Compliance requirements",
+    "Latency/cost constraints"
+  ],
+  "citations": [
+    {
+      "doc_id": "c35827d1-bf3e-4948-98a7-e1a806b464ed-1c0b03677dab3371",
+      "page": 1,
+      "section": "4. Technical Requirements",
+      "snippet_hash": "1e2b856027a660f2"
+    },
+    {
+      "doc_id": "c35827d1-bf3e-4948-98a7-e1a806b464ed-1c0b03677dab3371",
+      "page": 1,
+      "section": "4. Technical Requirements",
+      "snippet_hash": "a751993c342130d1"
+    },
+    {
+      "doc_id": "c35827d1-bf3e-4948-98a7-e1a806b464ed-1c0b03677dab3371",
+      "page": 1,
+      "section": "3.1 Functional Requirements (MANDATORY)",
+      "snippet_hash": "a7477589ba2e3dd7"
+    },
+    {
+      "doc_id": "c35827d1-bf3e-4948-98a7-e1a806b464ed-1c0b03677dab3371",
+      "page": 1,
+      "section": "4. Technical Requirements",
+      "snippet_hash": "41f310b75428471c"
+    }
+  ]
+}

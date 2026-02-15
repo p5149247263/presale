@@ -1,0 +1,131 @@
+{
+  "assumptions": [
+    {
+      "key": "gpu_hours_month",
+      "value": 320.0,
+      "unit": "hours",
+      "editable": true
+    },
+    {
+      "key": "gpu_rate_a10_usd_per_hour",
+      "value": 1.2,
+      "unit": "USD/hour",
+      "editable": true
+    },
+    {
+      "key": "storage_tb",
+      "value": 10.0,
+      "unit": "TB",
+      "editable": true
+    },
+    {
+      "key": "storage_rate_usd_per_tb",
+      "value": 25.0,
+      "unit": "USD/TB",
+      "editable": true
+    },
+    {
+      "key": "egress_tb",
+      "value": 4.0,
+      "unit": "TB",
+      "editable": true
+    },
+    {
+      "key": "egress_rate_usd_per_tb",
+      "value": 85.0,
+      "unit": "USD/TB",
+      "editable": true
+    },
+    {
+      "key": "monthly_prompt_tokens_m",
+      "value": 120.0,
+      "unit": "Million tokens",
+      "editable": true
+    },
+    {
+      "key": "monthly_completion_tokens_m",
+      "value": 80.0,
+      "unit": "Million tokens",
+      "editable": true
+    },
+    {
+      "key": "llm_blended_rate_usd_per_m",
+      "value": 7.0,
+      "unit": "USD/M tokens",
+      "editable": true
+    },
+    {
+      "key": "rag_embedding_tokens_m",
+      "value": 40.0,
+      "unit": "Million tokens",
+      "editable": true
+    },
+    {
+      "key": "embedding_rate_usd_per_m",
+      "value": 0.3,
+      "unit": "USD/M tokens",
+      "editable": true
+    }
+  ],
+  "line_items": [
+    {
+      "category": "GPU",
+      "item": "Inference + batch processing (A10 equivalent)",
+      "monthly_cost_usd": 384.0,
+      "notes": "Placeholder rate, editable."
+    },
+    {
+      "category": "Storage",
+      "item": "Object + hot vector index",
+      "monthly_cost_usd": 250.0,
+      "notes": "Includes snapshots."
+    },
+    {
+      "category": "Networking",
+      "item": "Data egress",
+      "monthly_cost_usd": 340.0,
+      "notes": "Assumes internet/API traffic."
+    },
+    {
+      "category": "LLM",
+      "item": "Prompt + completion",
+      "monthly_cost_usd": 1400.0,
+      "notes": "Provider-specific pricing can be swapped."
+    },
+    {
+      "category": "RAG",
+      "item": "Embeddings + retrieval infra",
+      "monthly_cost_usd": 192.0,
+      "notes": "Vector DB + embeddings."
+    },
+    {
+      "category": "Monitoring",
+      "item": "Observability, logging, audit",
+      "monthly_cost_usd": 250.0,
+      "notes": "SIEM/metrics/log retention placeholder."
+    }
+  ],
+  "best_case_total": 2196.48,
+  "expected_total": 2816.0,
+  "worst_case_total": 3801.6,
+  "citations": [
+    {
+      "doc_id": "41427ecc-f498-4646-bed4-605ff2dac969-1c0b03677dab3371",
+      "page": 1,
+      "section": "Vendor must provide:",
+      "snippet_hash": "2383c173ffd565ae"
+    },
+    {
+      "doc_id": "41427ecc-f498-4646-bed4-605ff2dac969-1c0b03677dab3371",
+      "page": 1,
+      "section": "Responses must include:",
+      "snippet_hash": "7e422d0612acc882"
+    },
+    {
+      "doc_id": "41427ecc-f498-4646-bed4-605ff2dac969-1c0b03677dab3371",
+      "page": 1,
+      "section": "The solution must leverage Generative AI and machine learning to:",
+      "snippet_hash": "f9974e66b9ef35f3"
+    }
+  ]
+}

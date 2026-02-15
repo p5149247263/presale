@@ -1,0 +1,40 @@
+{
+  "risks": [
+    {
+      "risk_id": "RISK-001",
+      "category": "privacy",
+      "description": "PII or PHI leakage via prompts/logs.",
+      "likelihood": "Medium",
+      "impact": "High",
+      "mitigations": ["PII redaction", "Prompt filtering", "Encryption"],
+      "owner": "Security Lead",
+      "residual_risk": "Medium",
+      "citations": [
+        {
+          "doc_id": "mock_rfp_healthcare",
+          "page": 1,
+          "section": "Section 3: Compliance and Security",
+          "snippet_hash": "c3d4e5f60708192a"
+        }
+      ]
+    },
+    {
+      "risk_id": "RISK-002",
+      "category": "hallucination",
+      "description": "Ungrounded responses may reduce business trust.",
+      "likelihood": "Medium",
+      "impact": "High",
+      "mitigations": ["RAG citations", "Constrained generation", "Human review checkpoint"],
+      "owner": "AI Lead",
+      "residual_risk": "Medium",
+      "citations": [
+        {
+          "doc_id": "mock_rfp_healthcare",
+          "page": 1,
+          "section": "Section 2: Mandatory Requirements",
+          "snippet_hash": "d4e5f60708192a3b"
+        }
+      ]
+    }
+  ]
+}
